@@ -11,8 +11,14 @@
             <span>工单编号</span> <span>{{ele.code}}</span>
             <el-button style="float: right; padding: 3px 0" type="text">{{filterStatus(ele.status)}}</el-button>
           </div>
-          <div v-for="o in 3" :key="o" class="text item">
-            {{'列表内容 ' + o }}
+          <div class="text item">
+            工单标题：2020年2月10日工单
+          </div>
+          <div class="text item">
+            提交日期：2020-02-10 12:00:00
+          </div>
+          <div class="text item">
+            关闭日期：2020-02-10 12:00:00
           </div>
         </el-card>
       </el-tab-pane>
@@ -22,8 +28,14 @@
             <span>工单编号</span> <span>{{ele.code}}</span>
             <el-button style="float: right; padding: 3px 0" type="text">{{filterStatus(ele.status)}}</el-button>
           </div>
-          <div v-for="o in 3" :key="o" class="text item">
-            {{'列表内容 ' + o }}
+          <div class="text item">
+            工单标题：2020年2月10日工单
+          </div>
+          <div class="text item">
+            提交日期：2020-02-10 12:00:00
+          </div>
+          <div class="text item">
+            关闭日期：2020-02-10 12:00:00
           </div>
         </el-card>
       </el-tab-pane>
@@ -33,8 +45,14 @@
             <span>工单编号</span> <span>{{ele.code}}</span>
             <el-button style="float: right; padding: 3px 0" type="text">{{filterStatus(ele.status)}}</el-button>
           </div>
-          <div v-for="o in 3" :key="o" class="text item">
-            {{'列表内容 ' + o }}
+          <div class="text item">
+            工单标题：2020年2月10日工单
+          </div>
+          <div class="text item">
+            提交日期：2020-02-10 12:00:00
+          </div>
+          <div class="text item">
+            关闭日期：2020-02-10 12:00:00
           </div>
         </el-card>
       </el-tab-pane>
@@ -109,12 +127,12 @@ export default {
   h3{
     float: left;
     display: inline-block;
-    font-size:16px;
-    font-weight:500;
+    font-size:14px;
+    //font-weight:500;
     margin: 10px 0 10px 15px;
   }
   .user-icon{
-    font-size: 18px;
+    font-size: 16px;
     float: right;
     margin: 12px 15px 10px 0px;
   }
@@ -142,7 +160,7 @@ export default {
   padding-top:15px;
 }
 .text {
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .item {
@@ -172,7 +190,20 @@ export default {
 }
 /deep/ .el-card__header{
   padding:8px 16px;
-  font-size: 14px;
+  font-size: 12px;
+}
+.clearfix{
+  span{
+    display: inline-block;
+    height:20px;
+    line-height: 20px;
+  }
+}
+/deep/ .el-card__body{
+  padding:16px;
+}
+/deep/ .el-button{
+  font-size: 12px;
 }
 /deep/ .text{
   font-size: 12px;
