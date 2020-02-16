@@ -1,19 +1,20 @@
 const path = require('path')
-const resolve = dir => path.join(__dirname,dir)
 
+const resolve = dir => path.join(__dirname, dir)
 
-// const BASE_URL = process.env.NODE_ENV === 'procution' ? '/' : '/'
+const BASE_URL = process.env.NODE_ENV === 'production' ? '/' : '/'
 
 module.exports = {
   lintOnSave: false,
-  // baseUrl:BASE_URL,
-  chainWebpack: config =>{
+  publicPath: BASE_URL,
+  chainWebpack: config => {
     config.resolve.alias
-    .set('@',resolve('src'))
-    .set('_c',resolve('src/components'))
+      .set('@', resolve('src'))
+      .set('_c', resolve('src/components'))
   },
-  // procutionSourceMap: false,
-  // devServer: {
-  //    proxy: ""
-  // }
+  // 打包时不生成.map文件
+  productionSourceMap: false,
+  devServer: {
+     proxy: 'https://ics.atlenovo.com/zuul/v1/zuul-admin'
+  }
 }

@@ -1,12 +1,12 @@
 <template>
   <div class="home">
-    <WorkOrder msg="Welcome to Your Vue.js App"/>
+    <WorkOrder msg="work order"/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import WorkOrder from '@/components/WorkOrder.vue'
+import WorkOrder from './WorkOrder.vue'
 
 export default {
   name: 'Home',

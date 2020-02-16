@@ -2,7 +2,7 @@
   <div id="work-order">
     <div class='header-bar'>
       <h3>我的工单</h3>
-      <h3 class='el-icon-info user-icon'></h3>
+      <h3 class='el-icon-info user-icon' @click="logOut"></h3>
     </div>
     <el-tabs v-model="activeName" @tab-click="handleClick">
       <el-tab-pane :label="'进行中('+Statistics.haveInHand+')'" name="first">
@@ -61,6 +61,7 @@
 </template>
 
 <script>
+import { setToken } from '@/lib/util'
 export default {
   name: 'WorkOrder',
   props: {
@@ -105,6 +106,11 @@ export default {
       }else if(status==2){
         return '待评价'
       }
+    },
+    logOut(){
+      setToken('')
+      this.$router.push('/login')
+
     }
   }
 }

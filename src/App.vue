@@ -1,16 +1,18 @@
 <template>
-  <div id="app">
-    <WorkOrder msg="WorkOrder"/>
+   <div id="app">
+    <div id="nav">
+      <!-- <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link> -->
+    </div>
+    <router-view/>
   </div>
 </template>
 
 <script>
-import WorkOrder from './components/WorkOrder.vue'
 
 export default {
   name: 'app',
   components: {
-    WorkOrder
   }
 }
 </script>
